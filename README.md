@@ -1,11 +1,15 @@
 
 ## Tabla de contenidos
 1. [Informacion General](#general-info)
-2. [Tegnologias](#technologies)
-3. [Instalacion](#installation)
+2. [Instalacion](#Instalacion)
+3. [Tegnologias](#Tegnologias)
+4. [Test Aplicados a Inventario ](#Tegnologias)
+5. [Verificar health checks](#installation)
+6. [Swager](#installation)
+7. [Como ingresar a los logs](#installation)
 ### Informacion General
 ***
-Este repositorio abarca la instalacion total del proyecto de microservicios de produto y invetario, ademas la documentacion del microservicio de Inventario
+El repositorio abarca la instalacion total del proyecto de microservicios de produto y invetario, ademas la documentacion del microservicio de Inventario
 
 ## Instalacion
 ***
@@ -90,7 +94,7 @@ Lista de tegnologia utilzada para crear el microservicio
 * [Java](https://example.com): Version 17
 * [Spring Boot](https://example.com): Version 3.5.6
 
-## Test Aplicados a Invetario 
+## Test Aplicados a Inventario 
 La pruebas realizadas a microservicio de invetario abarcaron un %84 del total de codigo. El test que hicieron contiene lo siguiente
 * Creación de productos.
 * Gestión de inventario y proceso de compra.
@@ -111,3 +115,11 @@ Utilize Swager para hacer la documentacion de los enpoint de los microservicios
 
 <img width="1820" height="889" alt="image" src="https://github.com/user-attachments/assets/a79d7b71-862d-4548-bf61-3dbcb488119d" />
 
+## Como ingresar a los logs
+Los logs se peuden ver detro de un archivo que se llama app.log dentro del contenedor para poder verlo ingresa estos comados
+```
+docker logs inventario-sevicio
+```
+```
+cat /app/logs/app.log
+```

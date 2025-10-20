@@ -1,4 +1,3 @@
-# Inventario-linktic
 
 ## Tabla de contenidos
 1. [Informacion General](#general-info)
@@ -6,23 +5,18 @@
 3. [Instalacion](#installation)
 ### Informacion General
 ***
-Este repositorio abarca la intalacion total del proyecto de microservicios de produto y invetario, ademas la doucmentacion del microservicio de Inventario
+Este repositorio abarca la instalacion total del proyecto de microservicios de produto y invetario, ademas la documentacion del microservicio de Inventario
 
-## Tegnologias
-***
-Lista de tegnologia utilzada para crear el microservicio de inventario
-* [Java](https://example.com): Version 17
-* [Spring Boot](https://example.com): Version 3.5.6
 ## Instalacion
 ***
-Para que funcione correctamente nesecitamos que ya tenga descargado los microservicios de [Invetario-Lintick](https://github.com/SantiagoCr8/Inventario-linktic) y [Producto-Lintick](https://github.com/SantiagoCr8/Producto-Linktic) ademas colocarlos en una misma carpeta
+Para que funcione correctamente nesecitamos que ya tenga descargado los microservicios de [Invetario-Lintick](https://github.com/SantiagoCr8/Inventario-linktic) y [Producto-Lintick](https://github.com/SantiagoCr8/Producto-Linktic) y ademas se deben colocar en una misma carpeta
 
-Verifica que ya tengo instalado docker composer con el siguiente comando debe aparecer la verision
+Verifica que ya tengo instalado docker composer con el siguiente comando, debe aparecer la vercion
 ```
 docker-compose --version
 ```
 
-Crea un archivo docker-compose.yml afuera de los dos proyectos de invetario y producto despues agrega el siguiente contenido 
+Crea un archivo docker-compose.yml afuera de los dos microservicios, despues agrega el siguiente contenido 
 ```
 version: "3.9"
 
@@ -85,14 +79,19 @@ volumes:
   main_data:
 
 ```
-Despues abre un simbolo del sistema dentro de la carpeta donde esta docker-compose.yml y ejecute el siguiente comando para que se instale 
+Abre un simbolo del sistema dentro de la carpeta donde esta docker-compose.yml y ejecute el siguiente comando para que se instale 
 
 ```
 docker compose up -d --build
 ```
+## Tegnologias
+***
+Lista de tegnologia utilzada para crear el microservicio
+* [Java](https://example.com): Version 17
+* [Spring Boot](https://example.com): Version 3.5.6
 
 ## Test Aplicados a Invetario 
-La pruebas realizadas a microservicio de invetario abarcaron un %84 del total de codigo.El test que hicieron contiene los siguiente
+La pruebas realizadas a microservicio de invetario abarcaron un %84 del total de codigo. El test que hicieron contiene lo siguiente
 * Creación de productos.
 * Gestión de inventario y proceso de compra.
 * Comunicación entre microservicios.
@@ -100,3 +99,15 @@ La pruebas realizadas a microservicio de invetario abarcaron un %84 del total de
 * Prueba de integración del microservicio.
 
 <img width="970" height="297" alt="image" src="https://github.com/user-attachments/assets/c2b18d84-2e97-48f6-9524-3b6d3c2a349f" />
+
+## Verificar health checks.
+Se agrego un health checks y se verifica mediante la URL donde se envia un JSON con el estado de funcionamento
+http://localhost:8080/actuator/health 
+<img width="1425" height="419" alt="image" src="https://github.com/user-attachments/assets/9a2e0bed-c6a7-4e71-9593-dfc90785ccb6" />
+
+
+## Swager
+Utilize Swager para hacer la documentacion de los enpoint de los microservicios
+
+<img width="1820" height="889" alt="image" src="https://github.com/user-attachments/assets/a79d7b71-862d-4548-bf61-3dbcb488119d" />
+
